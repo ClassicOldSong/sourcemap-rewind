@@ -9,7 +9,7 @@ Rewind a compressed javascript to it's original project using sourcemap easily, 
 
 Usage
 ------------
-Make sure you have your packed js file and sourmap are valid.
+Make sure your packed js file and sourmap are valid.
 
 Use as a cli tool:
 

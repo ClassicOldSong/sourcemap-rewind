@@ -1,6 +1,6 @@
 {
   "name": "sourcemap-rewind",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unpack javascript with sourcemap to it's original state",
   "main": "index.js",
   "bin": {
