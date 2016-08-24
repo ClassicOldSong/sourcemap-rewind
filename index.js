@@ -17,7 +17,6 @@ module.exports = (rawPath, outPath) => {
     .then(mapping => Promise.map(mapping, ({filePath, content}) => {
       return mkdirp(path.dirname(filePath))
         .then(() => fs.writeFileAsync(filePath, content))
-        .catch(() => Promise.reject(filePath))
         .then(() => filePath)
     }))
 }
