@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 'use strict'
-const Promise = require('bluebird')
 const path = require('path')
-
 const argv = require('yargs')
   .option('i', {
     alias: 'input',
@@ -28,15 +26,7 @@ if (argv.i === '') {
   process.exit(1)
 }
 
-require('../')(argv.i, argv.o)
-  .then(mapping => Promise.map(mapping, ({filePath, content}) => {
-    console.log(`Processing ${filePath}`)
-    const mkdirp = Promise.promisify(require('mkdirp'))
-    const writeFile = Promise.promisify(require('fs').writeFile)
-    return mkdirp(path.dirname(filePath))
-      .then(() => writeFile(filePath, content))
-  }))
-  .then(() => {
-    process.stdout.write('\r\x1b[K')
-    process.stdout.write(`Complete! You can find the resolved project at "${path.resolve(argv.o)}"`)
-  })
+require('../')(argv.i, argv.o).then(() => {
+  const outputPath = path.resolve(argv.o)
+  console.log(`Complete! You can find the resolved project at "${outputPath}"`)
+})

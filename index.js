@@ -14,4 +14,10 @@ module.exports = (rawPath, outPath) => {
       filePath: `${outPath}${path.resolve('/', filePath)}`.replace(':', ''),
       content: sourcesContent[index]
     })))
+    .then(mapping => Promise.map(mapping, ({filePath, content}) => {
+      const mkdirp = Promise.promisify(require('mkdirp'))
+      const writeFile = Promise.promisify(fs.writeFile)
+      return mkdirp(path.dirname(filePath))
+        .then(() => writeFile(filePath, content))
+    }))
 }
