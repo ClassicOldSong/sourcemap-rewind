@@ -12,12 +12,14 @@
     "source-map-resolve": "^0.5.0",
     "yargs": "^5.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "standard": "*"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "engine": {
-    "node": ">=6.0.0",
+    "node": ">=6.0.0"
   },
   "repository": {
     "type": "git",
