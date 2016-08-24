@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 module.exports = (rawPath, outPath) => {
-  let rawContent = fs.readFileSync(rawPath).toString()
+  const rawContent = fs.readFileSync(rawPath).toString()
 
   return resolveSourceMap(rawContent, rawPath, fs.readFile)
     .then(({map, sourcesRelativeTo}) => resolveSources(map, sourcesRelativeTo, fs.readFile))
