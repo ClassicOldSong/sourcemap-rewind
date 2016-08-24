@@ -1,10 +1,10 @@
 {
   "name": "sourcemap-rewind",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unpack javascript with sourcemap to it's original state",
   "main": "index.js",
   "bin": {
-    "sourcemap-rewind": "cmd.js"
+    "sourcemap-rewind": "bin/cmd.js"
   },
   "dependencies": {
     "yargs": "^5.0.0"

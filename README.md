@@ -13,7 +13,7 @@ Make sure you have your packed js file and sourmap are valid.
 
 Use as a cli tool:
 
-	$ npm install sourcemap-rewind -g
+	$ sudo npm install sourcemap-rewind -g
 	$ sourcemap-rewind -i app.js -o ./out
 
 or
