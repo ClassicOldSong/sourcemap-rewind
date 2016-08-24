@@ -1,22 +1,2 @@
-# Java class files
-*.class
-
-# Generated files
-gen/
-
-# Certifications
-cert/
-
-# Log Files
-*.log
-*.log.*
-
-# Temp Files
-*~
-*.*~
-.fuse_*
-
-# Project files
-
-# node modules
-node_modules/
+/node_modules/
+/source/
