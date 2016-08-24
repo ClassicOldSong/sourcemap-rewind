@@ -1,0 +1,36 @@
+{
+  "name": "sourcemap-rewind",
+  "version": "0.1.0",
+  "description": "Unpack javascript with sourcemap to it's original state",
+  "main": "index.js",
+  "bin": {
+    "sourcemap-rewind": "cmd.js"
+  },
+  "dependencies": {
+    "yargs": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClassicOldSong/sourcemap-rewind.git"
+  },
+  "keywords": [
+    "sourcemap",
+    "rewind",
+    "unpack",
+    "browserify",
+    "webpack",
+    "recover",
+    "javascript",
+    "resolve"
+  ],
+  "author": "ClassicOldSong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ClassicOldSong/sourcemap-rewind/issues"
+  },
+  "homepage": "https://github.com/ClassicOldSong/sourcemap-rewind#readme"
+}
