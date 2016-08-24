@@ -14,9 +14,9 @@ module.exports = (rawPath, outPath) => {
       filePath: `${outPath}${path.resolve('/', filePath)}`.replace(':', ''),
       content: sourcesContent[index]
     })))
-    .then(mapping => Promise.map(mapping, ({filePath, content}) => {
+    .map(({filePath, content}) => {
       return mkdirp(path.dirname(filePath))
         .then(() => fs.writeFileAsync(filePath, content))
         .then(() => filePath)
-    }))
+    })
 }
