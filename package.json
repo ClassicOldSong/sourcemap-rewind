@@ -21,6 +21,7 @@
   "engine": {
     "node": ">=6.0.0"
   },
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ClassicOldSong/sourcemap-rewind.git"
